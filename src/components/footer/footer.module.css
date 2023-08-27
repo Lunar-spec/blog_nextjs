@@ -14,13 +14,13 @@
 }
 
 .icon{
-  font-size: 18px;
   opacity: 0.8;
   cursor: pointer;
   transition: .3s ease-out;
 }
 .icon:hover{
-  font-size: 22px;
+  height: 30px;
+  width: 30px;
   opacity: 1;
   color: #00D7FF;
   filter: drop-shadow(0 0 10px #00D7FF);

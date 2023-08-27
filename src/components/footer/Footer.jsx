@@ -1,16 +1,16 @@
 import React from 'react'
 import styles from './footer.module.css'
-import {FaFacebook, FaTwitter, FaYoutube, FaInstagram} from 'react-icons/fa'
+import { Twitter, Youtube,Facebook, Instagram } from 'lucide-react'
 
 const Footer = () => {
     return (
         <div className={styles.container}>
-            <div>©2023 CicaDa. All rights reserved</div>
+            <div>©2023 Arctic CicaDa. All rights reserved</div>
             <div className={styles.social}>
-                <FaFacebook className={styles.icon}/>
-                <FaInstagram className={styles.icon}/>
-                <FaTwitter className={styles.icon}/>
-                <FaYoutube className={styles.icon}/>
+                <Facebook  strokeWidth={1} className={styles.icon}/>
+                <Instagram  strokeWidth={1} className={styles.icon}/>
+                <Twitter  strokeWidth={1} className={styles.icon}/>
+                <Youtube  strokeWidth={1} className={styles.icon}/>
             </div>
         </div>
     )

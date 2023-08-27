@@ -1,0 +1,34 @@
+.container {
+    /* background: gold; */
+}
+
+.catTitle{
+    color: #19a7ce;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+}
+
+.item{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.imgContainer{
+    flex: 1;
+    height: 500px;
+    position: relative;
+}
+
+.img{
+    object-fit: cover;
+}
+
+.content{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
