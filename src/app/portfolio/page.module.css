@@ -1,0 +1,47 @@
+.mainTitle{
+    letter-spacing: 5px;
+    font-size: 100px;
+}
+
+.container{
+    /* background: gold; */
+}
+
+.selectTitle{
+    letter-spacing: 3px;
+    margin: 20px 0px;
+}
+
+.items{
+    display: flex;
+    gap: 50px;
+}
+
+.item{
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    height: 400px;
+    width: 300px;
+    position: relative;
+    transition: .3s ease-out;
+}
+
+.item:hover{
+    border: 2px solid #19A7CE;
+}
+
+.title{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    transition: .3s ease-out;
+}
+
+.title:hover{
+    padding: 5px 0 0 0;
+    background: #19A7CE;
+    color: #fff;
+}

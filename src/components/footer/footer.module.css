@@ -1,0 +1,27 @@
+.container{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
+}
+
+.icon{
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: .3s ease-out;
+}
+.icon:hover{
+  font-size: 22px;
+  opacity: 1;
+  color: #00D7FF;
+  filter: drop-shadow(0 0 10px #00D7FF);
+}

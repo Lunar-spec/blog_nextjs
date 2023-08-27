@@ -1,0 +1,57 @@
+.container{
+
+}
+
+.title{
+    letter-spacing: 8px;
+    font-size: 60px;
+    margin: 20px;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.imgContainer{
+    flex: 1;
+    height: 500px;
+    position: relative;
+}
+
+.image{
+    /* animation: move 1.5s infinite ease alternate; */
+}
+
+@keyframes move {
+    from{
+        transform: translateY(-15px);
+        opacity: .7;
+    }
+
+    to{
+        transform: translateY(0px) scale(1.03);
+    }
+}
+
+.form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input, 
+.textArea{
+padding: 10px 20px;
+background: transparent;
+border: none;
+outline: none;
+color: #bbb;
+font-family: 'Poppins', sans-serif;
+font-size: 14px;
+transition: .3s ease-out;
+border-bottom: 1px solid #fff;
+}
