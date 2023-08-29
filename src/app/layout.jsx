@@ -1,10 +1,10 @@
 import './globals.css'
-import { Inter, Raleway, Poppins } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/footer/Footer'
-import { ThemeProvider } from '@/context/ThemeContext'
+import { ThemeProvider } from '../context/ThemeContext'
 import AuthProvider from '@/components/AuthProvider/AuthProvider'
-// const inter = Inter({ subsets: ['latin'] })
+
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ['latin'],
