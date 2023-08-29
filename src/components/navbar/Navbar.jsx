@@ -3,6 +3,7 @@ import { PenTool } from 'lucide-react'
 import styles from './navbar.module.css'
 import Link from 'next/link'
 import React from 'react'
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
 
 const links = [
     {
@@ -45,12 +46,17 @@ const Navbar = () => {
                 <PenTool size={28} strokeWidth={1} className={styles.icon} />
             </Link>
             <div className={styles.links}>
+                <DarkModeToggle/>
                 {links.map(link => (
                     <Link key={link.id} href={link.url} className={styles.link}>
                         {link.title}
                     </Link>
                 ))}
-                <button className={styles.logout} onClick={() => console.log('Logout')}>Logout</button>
+                <button
+                    className={styles.logout}
+                    onClick={() => console.log('Logout')}>
+                    Logout
+                </button>
             </div>
         </div>
     )

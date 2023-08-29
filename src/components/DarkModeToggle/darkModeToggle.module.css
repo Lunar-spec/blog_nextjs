@@ -1,0 +1,30 @@
+.container {
+    width: 42px;
+    height: 24px;
+    border: 1.5px solid #19a7ce90;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    position: relative;
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px #19a7ce);
+}
+
+.icon {
+    font-size: 12px;
+}
+
+.ball {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #19a7ce;
+    position: absolute;
+}
+
+.container:hover .ball {
+    filter: drop-shadow(0 0 10px #19a7ce);
+}
+

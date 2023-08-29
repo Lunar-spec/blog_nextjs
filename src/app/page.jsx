@@ -12,7 +12,7 @@ export default function Home() {
         <Button url='/portfolio' text='See our Works'/>
       </div>
       <div className={styles.item}>
-        <Image src={hero} className={styles.img} alt='Hero' />
+        <Image src={hero} className={styles.img} alt='Hero' height={'auto'} width={'auto'} priority style={{ width: 'auto', height: 'auto' }}/>
       </div>
     </div>
   )

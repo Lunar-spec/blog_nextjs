@@ -1,3 +1,30 @@
-.container{
-    background: yellow;
+.container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.image {
+    object-fit: cover;
+    transition: .3s ease-out;
+    border: 2px solid transparent;
+}
+
+.container:hover .image {
+    border: 2px solid #19A7CE;
+    filter: drop-shadow(10px 10px 20px #19a7ce66);
+}
+
+.content {
+}
+
+.title {
+    color: #19A7CE;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 18px;
+    color: #999;
 }

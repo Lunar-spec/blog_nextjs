@@ -3,6 +3,11 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Button from "@/components/button/Button";
 
+export const metadata = {
+    title: 'About',
+    description: 'Blog Application',
+}
+
 const About = () => {
     return (
         <div className={styles.container}>
@@ -24,32 +29,35 @@ const About = () => {
                 <div className={styles.item}>
                     <h1 className={styles.title}> Who are we?</h1>
                     <p className={styles.desc}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem,
-                        aliquid vero quaerat laborum debitis fugiat mollitia voluptates
-                        aliquam cum, at dolor, fugit sed provident saepe! Expedita molestiae
-                        maxime nostrum culpa?
+                        Welcome to our vibrant corner of the digital world. We&apos;re a
+                        community of passionate individuals brought together by our shared
+                        love for exploration and discovery. Our team is fueled by
+                        creativity, collaboration, and a collective commitment to delivering
+                        valuable insights that ignite conversations and inspire growth.
                         <br />
                         <br />
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem,
-                        aliquid vero quaerat laborum debitis fugiat mollitia voluptates
-                        aliquam cum, at dolor, fugit sed provident saepe! Expedita molestiae
-                        maxime nostrum culpa?
+                        At our core, we&apos;re storytellers, weaving narratives that
+                        resonate with diverse perspectives. Through our words, we seek to
+                        bridge gaps, connect minds, and create a space where everyone&apos;s
+                        voice can be heard. With a blend of expertise and enthusiasm,
+                        we&apos;re more than a team - we&apos;re a community fostering
+                        connections in the digital realm.
                     </p>
                 </div>
                 <div className={styles.item}>
                     <h1 className={styles.title}> What we do?</h1>
                     <p className={styles.desc}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem,
-                        aliquid vero quaerat laborum debitis fugiat mollitia voluptates
-                        aliquam cum, at dolor, fugit sed provident saepe! Expedita molestiae
-                        maxime nostrum culpa?
+                        From thought-provoking analyses to practical guides, we curate
+                        content that empowers you to navigate the ever-evolving landscape of
+                        ideas. Our journey is marked by a commitment to intellectual growth
+                        and the joy of discovery. Together, we embark on a quest to unlock
+                        the potential of shared knowledge and create a brighter digital
+                        future.
                         <br />
                         <br />
-                        -us sides contain though guide might wagon 
-                        <br/><br/>
-                        -knowledge ruler bell asleep lack solve 
+                        -Words that Transcend
                     </p>
-                    <Button url={"/contact"} text={"Connect"} className={styles.button}/>
+                    <Button url={"/contact"} text={"Connect"} className={styles.button} />
                 </div>
             </div>
         </div>

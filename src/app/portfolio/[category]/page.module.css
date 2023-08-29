@@ -11,18 +11,24 @@
 .item{
     display: flex;
     gap: 50px;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.item:nth-child(2n + 1) {
+    flex-direction: row-reverse;
 }
 
 .imgContainer{
     flex: 1;
-    height: 500px;
+    height: 450px;
+    /* width: 100px; */
     position: relative;
 }
 
 .img{
     object-fit: cover;
+    border: 2px solid #19a7ce;
 }
 
 .content{
@@ -31,4 +37,14 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+}
+
+
+.title{
+    font-size: 50px;
+    color: #19a7ce;
+}
+
+.desc{
+    font-size: 20px;
 }
