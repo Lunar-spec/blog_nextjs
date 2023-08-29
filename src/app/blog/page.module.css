@@ -22,9 +22,19 @@
 .title {
     color: #19A7CE;
     margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.username{
+    color: #19A7CE;
+    float: right;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .desc {
     font-size: 18px;
+    letter-spacing: 1.5px;
     color: #999;
 }

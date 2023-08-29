@@ -9,8 +9,10 @@ export const GET = async (request) => {
     const username = url.searchParams.get("username");
 
     try {
-        await connect()
+        await connect();
+
         const posts = await Post.find(username && { username });
+        
         return new NextResponse(JSON.stringify(posts), { status: 200 })
     } catch (error) {
         return new NextResponse('Database Error', { status: 500 })
@@ -19,12 +21,16 @@ export const GET = async (request) => {
 
 export const POST = async (request) => {
     const body = await request.json();
+    console.log(body)
 
     const newPost = new Post(body);
 
     try {
+        await connect();
+
         await newPost.save();
-        return new NewResponse("Post created", { status: 200 })
+
+        return new NextResponse("Post created", { status: 201 })
     } catch (error) {
         return new NextResponse('Database Error', { status: 500 })
     }

@@ -1,21 +1,28 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './page.module.css'
 import { Eye, EyeOff } from 'lucide-react'
 import { signIn, useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 export const metadata = {
     title: 'Login',
     description: 'Blog Application',
 }
 
-const Login = () => {
+const Login = ({ url }) => {
     const [view, setView] = useState('password');
-
+    const params = useSearchParams();
     const session = useSession();
     const router = useRouter();
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+
+    useEffect(() => {
+        setError(params.get("error"));
+        setSuccess(params.get("success"));
+    }, [params]);
 
     if (session.status === "loading") {
         return <p>Loading...</p>
@@ -39,10 +46,22 @@ const Login = () => {
 
     return (
         <div className={styles.container}>
+            <h1 className={styles.title}>{success ? success : "Welcome Back"}</h1>
+            <h2 className={styles.subtitle}>Please log in to see the dashboard.</h2>
             <form className={styles.form} onSubmit={handleSubmit}>
-                <input type="email" placeholder='Email' className={styles.input} required />
+                <input
+                    type="email"
+                    placeholder='Email'
+                    className={styles.input}
+                    required
+                />
                 <div className={styles.password}>
-                    <input type={view} placeholder='Password' className={styles.input} required />
+                    <input
+                        type={view}
+                        placeholder='Password'
+                        className={styles.input}
+                        required
+                    />
                     {view === 'password' ?
                         (<EyeOff className={styles.iconoff} onClick={handlePassword} />)
                         :

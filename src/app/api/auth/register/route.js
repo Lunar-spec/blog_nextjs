@@ -4,26 +4,30 @@ import bcrypt from "bcrypt"
 import { NextResponse } from "next/server";
 
 export const POST = async (request) => {
-    const { username, email, password } = await request.json();
+    const { name, email, password } = await request.json();
 
-    await connect();
+    console.log(name, email, password)
 
-    const hashedPassword = await bcrypt.hash(password, 5)
-
+    const hashedPassword = await bcrypt.hash(password, 10);
+    // console.log(hashedPassword)
     const newUser = new User({
-        username,
+        name,
         email,
         password: hashedPassword,
-    })
+    });
+    console.log(newUser)
 
     try {
-        await newUser.save()
+        await connect();
+
+        await newUser.save();
+
         return new NextResponse("User created", {
-            status: 201
+            status: 201,
         });
     } catch (error) {
         return new NextResponse(error.message, {
-            status: 500
+            status: 500,
         });
     }
 };

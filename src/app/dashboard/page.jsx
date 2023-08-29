@@ -54,7 +54,7 @@ const Dashboard = () => {
         router?.push("/dashboard/login")
     }
 
-    console.log(session)
+    // console.log(session)
 
 
     // console.log(data)
