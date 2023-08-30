@@ -43,7 +43,7 @@ const Dashboard = () => {
     const { data, mutate, error, isLoading } = useSWR(`api/posts?username=${session?.data?.user.name}`, fetcher);
 
     if (session.status === "loading") {
-        return <Loading/>
+        return <Loading />
     }
 
     if (session.status === "unauthenticated") {
@@ -97,7 +97,7 @@ const Dashboard = () => {
             <div className={styles.container}>
                 <div className={styles.posts}>
                     {isLoading ?
-                        <p>Loading...</p>
+                        <p><Loading /></p>
                         :
                         data?.map((post) => (
                             <div className={styles.post} key={post._id}>
