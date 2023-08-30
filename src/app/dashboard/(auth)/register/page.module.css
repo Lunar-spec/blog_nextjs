@@ -30,12 +30,12 @@
     border-bottom: 1px solid #fff;
     color: inherit;
     font-size: 16px;
-    font-family: 'Poppins';
+    /* font-family: 'Poppins'; */
     width: 100%;
 }
 
 .input::placeholder {
-    font-family: 'Poppins';
+    /* font-family: 'Poppins'; */
 }
 
 .password {
@@ -63,7 +63,7 @@
     padding: 15px 20px;
     border: none;
     font-size: 18px;
-    font-family: 'poppins';
+    /* font-family: 'poppins'; */
     margin: 10px;
     border-radius: 5px;
     cursor: pointer;

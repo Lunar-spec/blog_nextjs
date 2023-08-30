@@ -72,14 +72,14 @@
     background: transparent;
     border: none;
     border-bottom: 1px solid #19a7ce;
-    font-family: 'Poppins',sans-serif;
+    /* font-family: 'Poppins',sans-serif; */
     font-size: 16px;
 }
 
 .button{
     padding: 15px 20px;
     font-size: 18px;
-    font-family: 'Poppins',sans-serif;
+    /* font-family: 'Poppins',sans-serif; */
     background: #19a7ce;
     outline: none;
     border: none;
