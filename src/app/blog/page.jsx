@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import useSWR from 'swr'
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
@@ -10,14 +9,11 @@ export const metadata = {
     description: 'Blog Application',
 }
 const getData = async () => {
-
     const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts`,
-        {
-            method: "GET"
-        },
         {
             cache: "no-cache"
         });
+
     if (!res.ok) {
         console.log('Error: Something went wrong')
     }
