@@ -3,9 +3,9 @@ import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { useSession } from 'next-auth/react'
-import useSWR from 'swr'
-import Loading from '../loading'
+// import { useSession } from 'next-auth/react'
+// import useSWR from 'swr'
+// import Loading from '../loading'
 
 
 const getData = async (id) => {
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
 
 const BlogPost = async ({ params }) => {
     const data = await getData(params.id)
-    console.log(data)
+    // console.log(data)
     // console.log(params)
     // const id = params.id;
     // console.log(id)
