@@ -8,11 +8,6 @@ import Image from 'next/image'
 import { Delete } from 'lucide-react'
 import Loading from './loading'
 
-export const metadata = {
-    title: 'Dashboard',
-    description: 'Blog Application',
-}
-
 const Dashboard = () => {
     const session = useSession()
     const router = useRouter();
