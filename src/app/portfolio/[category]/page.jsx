@@ -5,11 +5,6 @@ import Image from 'next/image'
 import { items } from './data'
 import { notFound } from 'next/navigation'
 
-export const metadata = {
-    title: 'Portfolio',
-    description: 'Blog Application',
-}
-
 const getData = (cat) => {
     const data = items[cat]
 
