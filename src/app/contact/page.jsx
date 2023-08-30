@@ -8,7 +8,6 @@ export const metadata = {
     description: 'Blog Application',
 }
 
-
 const Contact = () => {
     return (
         <div className={styles.container}>

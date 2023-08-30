@@ -5,6 +5,7 @@ import { Eye, EyeOff } from 'lucide-react'
 import { signIn, useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
+import Loading from '../../loading'
 
 export const metadata = {
     title: 'Login',
@@ -14,8 +15,8 @@ export const metadata = {
 const Login = ({ url }) => {
     const [view, setView] = useState('password');
     const params = useSearchParams();
-    const session = useSession();
     const router = useRouter();
+    const session = useSession();
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
@@ -25,7 +26,7 @@ const Login = ({ url }) => {
     }, [params]);
 
     if (session.status === "loading") {
-        return <p>Loading...</p>
+        return <Loading />
     }
 
     if (session.status === "authenticated") {

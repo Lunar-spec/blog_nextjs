@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Delete } from 'lucide-react'
+import Loading from './loading'
 
 export const metadata = {
     title: 'Dashboard',
@@ -47,7 +48,7 @@ const Dashboard = () => {
     const { data, mutate, error, isLoading } = useSWR(`api/posts?username=${session?.data?.user.name}`, fetcher);
 
     if (session.status === "loading") {
-        return <p>Loading...</p>
+        return <Loading/>
     }
 
     if (session.status === "unauthenticated") {

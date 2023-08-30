@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
+import Loading from './loading'
+import { useSession } from 'next-auth/react'
 
 export const metadata = {
     title: 'Portfolio',
@@ -8,6 +10,7 @@ export const metadata = {
 }
 
 const Portfolio = () => {
+
     return (
         <div className={styles.container}>
             <h1 className={styles.selectTitle}>Choose a gallery</h1>
