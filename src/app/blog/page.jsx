@@ -15,7 +15,7 @@ const getData = async () => {
     });
 
     if (!res.ok) {
-        alert('Something went wrong')
+        console.log('Error: Something went wrong')
     }
     return res.json();
 }
