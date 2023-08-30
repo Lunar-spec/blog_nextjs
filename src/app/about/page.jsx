@@ -17,6 +17,7 @@ const About = () => {
                     alt="about"
                     fill={true}
                     className={styles.img}
+                    loading='lazy'
                 />
                 <div className={styles.imgText}>
                     <h1 className={styles.imgTitle}>Digital Storytellers</h1>

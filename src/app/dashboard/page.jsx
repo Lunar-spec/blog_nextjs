@@ -112,6 +112,7 @@ const Dashboard = () => {
                                         alt={post.title}
                                         className={styles.img}
                                         width={200} height={100}
+                                        priority
                                     />
                                 </div>
                                 <h2 className={styles.postTitle}>{post.title}</h2>

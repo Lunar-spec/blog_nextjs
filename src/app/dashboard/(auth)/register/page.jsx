@@ -5,11 +5,6 @@ import Link from 'next/link'
 import { Eye, EyeOff } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
-export const metadata = {
-    title: 'Register',
-    description: 'Blog Application',
-}
-
 const Register = () => {
     const [view, setView] = useState('password');
     const handlePassword = () => {

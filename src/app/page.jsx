@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import hero from 'public/Discussion.svg'
 import Button from '@/components/button/Button'
+import Loading from './contact/loading'
 
 export default function Home() {
   return (

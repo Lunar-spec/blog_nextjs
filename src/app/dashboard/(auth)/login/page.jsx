@@ -7,11 +7,6 @@ import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Loading from '../../loading'
 
-export const metadata = {
-    title: 'Login',
-    description: 'Blog Application',
-}
-
 const Login = ({ url }) => {
     const [view, setView] = useState('password');
     const params = useSearchParams();

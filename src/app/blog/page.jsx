@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 const getData = async () => {
-    const res = await fetch(`http://localhost:3000/api/posts`, 
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts`, 
     {
         cache: "no-store"
     });
@@ -30,10 +30,11 @@ const Blog = async () => {
                     <div className={styles.imageContainer}>
                         <Image
                             src={item.img}
-                            alt='Camp'
+                            alt={item.title}
                             width={400}
                             height={250}
                             className={styles.image}
+                            loading='lazy'
                         />
                     </div>
                     <div className={styles.content}>

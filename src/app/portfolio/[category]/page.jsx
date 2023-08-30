@@ -45,7 +45,7 @@ const Category = ({ params }) => {
                             alt={item.title}
                             fill={true}
                             sizes='400'
-                            priority
+                            loading='lazy'
                             className={styles.img}
                         />
                     </div>
