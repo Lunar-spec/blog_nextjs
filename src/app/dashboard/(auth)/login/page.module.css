@@ -82,11 +82,6 @@
     transition: .3s ease-out;
 }
 
-input,
-button {
-    font-family: 'Poppins', sans-serif;
-}
-
 .button:hover {
     color: #fff;
     background: #189dd1;
