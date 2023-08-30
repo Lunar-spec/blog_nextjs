@@ -26,12 +26,6 @@ const Register = () => {
         const email = e.target[1].value
         const password = e.target[2].value
 
-        console.log(JSON.stringify({
-            name,
-            email,
-            password
-        }))
-
         try {
             const res = await fetch("/api/auth/register", {
                 method: "POST",
@@ -48,7 +42,8 @@ const Register = () => {
             res.status === 201 && router.push('/dashboard/login?success=Account created')
         } catch (error) {
             setErr(error)
-            console.log(error)
+            alert('Something went wrong please try again later.')
+            // console.log(error)
         }
     }
 

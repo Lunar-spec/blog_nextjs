@@ -16,6 +16,7 @@
     font-size: 42px;
     letter-spacing: 5px;
     color: #19a7ce;
+    padding-right: 10px;
 }
 
 .desc {
@@ -23,20 +24,23 @@
     font-weight: 300;
     letter-spacing: 1.5px;
     font-weight: 400;
+    padding-right: 20px;
 }
 
 .author {
     display: flex;
     align-items: center;
-    gap: 10px;
+    margin-top: 10px;
+    gap: 20px;
     color: #19a7ce;
     letter-spacing: 2px;
 }
 
 .avatar {
+    display: flex;
+    align-items: center;
     object-fit: cover;
     border-radius: 50%;
-    margin-top: 10px;
     border: 1px solid #19a7ce;
     filter: drop-shadow( 0 0 10px #19a7ce6d);
 }
@@ -52,17 +56,19 @@
 }
 
 .image {
+    display: flex;
+    align-items: center;
     border: 2px solid #19a7ce;
     filter: drop-shadow(5px 10px 10px #19a7ce55);
     object-fit: cover;
 }
 
 .content {
-    margin-top: 50px;
+    margin-top: 25px;
     font-size: 20px;
     font-weight: 400;
     color: #999;
     text-align: justify;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 
 }

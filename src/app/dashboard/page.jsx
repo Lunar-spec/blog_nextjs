@@ -80,7 +80,8 @@ const Dashboard = () => {
             mutate();
             e.target.reset();
         } catch (error) {
-            console.log(error)
+            alert('Something went wrong try again later.')
+            // console.log(error)
         }
     }
 
