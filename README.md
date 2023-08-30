@@ -19,7 +19,7 @@ This project is a Next.js-based blog application that allows users to create, re
 
 ## Access the Deployed Application
 
-You can access the deployed application using the following link: [https://blog-nextjs-phi-taupe.vercel.app/](https://blog-nextjs-phi-taupe.vercel.app/)
+You can access the deployed application using the following link: [https://firstnext-blog.vercel.app/](https://firstnext-blog.vercel.app/)
 
 ## Directory Structure
 
