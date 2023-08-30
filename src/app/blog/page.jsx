@@ -9,10 +9,14 @@ export const metadata = {
 }
 
 const getData = async () => {
-    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts`, 
-    {
-        cache: "no-store"
-    });
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts`, {
+        headers: {
+            "Content-Type": "application/json",
+        },
+    },
+        {
+            cache: "no-store"
+        });
 
     if (!res.ok) {
         console.log('Error: Something went wrong')
@@ -22,7 +26,7 @@ const getData = async () => {
 
 const Blog = async () => {
     const data = await getData();
-    
+
     return (
         <div className={styles.mainContainer}>
             {data.map(item => (
