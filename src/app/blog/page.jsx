@@ -9,11 +9,10 @@ export const metadata = {
 }
 
 const getData = async () => {
-
-    const baseURL = process.env.NEXTAUTH_URL
-
-    const res = await fetch(`${baseURL}/api/posts`);
-
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts`,
+        {
+            cache: "no-cache"
+        });
     if (!res.ok) {
         console.log('Error: Something went wrong')
     }
