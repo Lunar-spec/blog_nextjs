@@ -50,7 +50,7 @@ background: transparent;
 border: none;
 outline: none;
 color: inherit;
-font-family: 'Poppins', sans-serif;
+/* font-family: 'Poppins', sans-serif; */
 font-size: 14px;
 transition: .3s ease-out;
 border-bottom: 1px solid #fff;
