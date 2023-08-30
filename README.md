@@ -25,26 +25,33 @@ You can access the deployed application using the following link: [https://blog-
 
 The project directory structure is as follows:
 
-- `public`: Contains static assets like images, fonts, and other resources.
-
-- `src`:
-  - `app`: The core application files.
-    - `about`, `api`, `blog`, `contact`, `dashboard`, `portfolio`: Subdirectories for different sections of the application.
-    - `globals.css`: Global CSS file for styling.
-    - `layout.jsx`: Main layout component.
-    - `loading.module.css`: CSS module for the loading component.
-    - `page.jsx`, `page.module.css`: Example pages with associated styles.
-
-  - `components`: Reusable UI components.
-    - `AuthProvider`: Authentication provider component for Google login.
-    - `button`: Button components.
-    - `DarkModeToggle`: Component for toggling dark mode.
-    - `footer`: Footer component.
-    - `navbar`: Navigation bar component.
-
-  - `context`: Context providers for state management.
-  - `models`: Data models and schemas.
-  - `utils`: Utility functions.
+```bash
+blog-nextjs/
+  ├── public/
+  │   ├── ...
+  ├── src/
+  │   ├── app/
+  │   │   ├── about/
+  │   │   ├── api/
+  │   │   ├── blog/
+  │   │   ├── contact/
+  │   │   ├── dashboard/
+  │   │   ├── portfolio/
+  │   │   ├── globals.css
+  │   │   ├── layout.jsx
+  │   │   ├── loading.module.css
+  │   │   ├── page.jsx
+  │   │   └── page.module.css
+  │   ├── components/
+  │   │   ├── AuthProvider/
+  │   │   ├── button/
+  │   │   ├── DarkModeToggle/
+  │   │   ├── footer/
+  │   │   └── navbar/
+  │   ├── context/
+  │   ├── models/
+  │   └── utils/
+```
 
 ## Getting Started
 
