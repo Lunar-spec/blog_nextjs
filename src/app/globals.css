@@ -58,3 +58,7 @@ a {
   background-color: rgb(28, 27, 27);
 }
 
+button, input, textarea{
+  font-family: 'Poppins', sans-serif;
+}
+
