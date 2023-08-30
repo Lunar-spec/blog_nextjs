@@ -11,7 +11,7 @@ export const metadata = {
 const getData = async () => {
     const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts`, {
         headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "text/html",
         },
     },
         {
