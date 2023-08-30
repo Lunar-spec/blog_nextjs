@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
@@ -8,48 +8,50 @@ import useSWR from 'swr'
 import Loading from '../loading'
 
 
-// const getData = async (id) => {
-//     const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${id}`,
-//         {
-//             cache: "no-store"
-//         }
-//     );
+const getData = async (id) => {
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${id}`,
+        {
+            cache: "no-store"
+        }
+    );
 
-//     if (!res.ok) {
-//         return notFound();
-//     }
-//     return res.json();
-// }
+    if (!res.ok) {
+        return notFound();
+    }
+    return res.json();
+}
 
-// export async function generateMetadata({ params }) {
-//     const post = await getData(params.id)
-//     return {
-//         title: post.title,
-//         description: post.desc,
-//     }
-// }
+export async function generateMetadata({ params }) {
+    const post = await getData(params.id)
+    return {
+        title: post.title,
+        description: post.desc,
+    }
+}
 
-const BlogPost = ({ params }) => {
+const BlogPost = async ({ params }) => {
+    const data = await getData(params.id)
+    console.log(data)
     // console.log(params)
     // const id = params.id;
     // console.log(id)
 
-    const session = useSession()
+    // const session = useSession()
 
-    const fetcher = (...args) => fetch(...args).then(res => res.json());
-    // console.log(fetcher)
-    const { data, mutate, error, isLoading } = useSWR(`api/posts/${params.id}`, fetcher);
+    // const fetcher = (...args) => fetch(...args).then(res => res.json());
 
-    if (session.status === "loading") {
-        return <Loading />
-    }
+    // const { data, mutate, error, isLoading } = useSWR(`api/posts/${params.id}`, fetcher);
 
-    if(!data) {
-        return notFound();
-    }
+    // if (session.status === "loading") {
+    //     return <Loading />
+    // }
 
-    console.log(data);
-    console.log(error);
+    // if(!data) {
+    //     return notFound();
+    // }
+
+    // console.log(data);
+    // console.log(error);
 
     return (
         <div className={styles.container}>
