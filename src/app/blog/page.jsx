@@ -12,13 +12,7 @@ const getData = async () => {
 
     const baseURL =`http://localhost:3000` ||  process.env.NEXTAUTH_URL
 
-    const res = await fetch(`${baseURL}/api/posts`, {
-        headers: {
-            "Content-Type": "text/html",
-        },
-    }, {
-        cache: "no-store"
-    });
+    const res = await fetch(`${baseURL}/api/posts`);
 
     if (!res.ok) {
         console.log('Error: Something went wrong')
