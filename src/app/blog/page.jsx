@@ -10,7 +10,7 @@ export const metadata = {
 
 const getData = async () => {
 
-    const baseURL =`http://localhost:3000` ||  process.env.NEXTAUTH_URL
+    const baseURL = process.env.NEXTAUTH_URL
 
     const res = await fetch(`${baseURL}/api/posts`);
 
